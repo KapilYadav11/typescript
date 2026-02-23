@@ -1,42 +1,97 @@
-//undestanding the interfae
-interface User {
+//interface with the class ,  constructor and object
+interface People{
     name: string;
     age: number;
-    address?:{ // ? indicates the optional parameter in the ts
-        country: string;
-        city: string;
-        pincode: number;
-    }
+    greet: () => string
 }
-let user: User = {
-    name:"Kapil",
-    age: 2,
-    address: {
-        country: "India",
-        city: "Bhopal",
-        pincode: 462023
-    }
-}
-let user2: User = {
-    name: "yadav",
-    age: 88,
-    
-}
- function isLegal(user: User): boolean{
-    if(user.age >= 18){
-        return true
-    } else{
-        return false
-    }
- }
 
- const result = isLegal(user)
- if(result){
-    console.log("is a legal");
- } else{
-    console.log("is a illlegal");
+let person: People ={
+    name: "Yadav",
+    age: 22,
+    greet: () => {
+        return "Hello"
+    }
+}
+class Manager implements People {
+    name: string;
+    age: number;
+    pincode: number;
+
+    constructor(name: string, age: number){
+    this.name = name;
+    this.age = age;
+    this.pincode = pincode
+    }
+}
+
+
+
+
+//undestanding the interfae
+// interface People{
+//     name: string;
+//     age: number;
+//     greet: () => string
+// }
+// let person: People = {
+//     name: "Kapil",
+//     age: 21,
+//     greet: () => {
+//         return "hi"
+//     }
+// }
+// let greeting = person.greet();
+// console.log(greeting);
+
+
+
+//understanding interface 
+//      address:{ 
+//         country: string;
+//         city: string;
+//         pincode: number;
+//      }
+// }
+// interface User {
+//     name: string;
+//     age: number;
+//     address: Address
+//     //     country: string;
+//     //     city: string;
+//     //     pincode: number;
+//     //}
+// }
+// let user: User5 = {
+//     name:"Kapil",
+//     age: 2,
+//     address: Address 
+//     //{
+//     //     country: "India",
+//     //     city: "Bhopal",
+//     //     pincode: 462023
+//     // }
+// }
+// let user2: User = {
+//     name: "yadav",
+//     age: 88,
+//     address: Address
     
- }
+// }
+//  function isLegal(user: User): boolean{
+//     if(user.age >= 18){
+//         return true
+//     } else{
+//         return false
+//     }
+//  }
+
+//  const result = isLegal(user)
+//  if(result){
+//     console.log("is a legal");
+//  } else{
+//     console.log("is a illlegal");
+    
+//  }
 
 
 
